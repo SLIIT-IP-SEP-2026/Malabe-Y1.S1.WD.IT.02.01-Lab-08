@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+ public class IT26102604Lab8Q1B{
+  public static void main (String [] args){
+
+  int numberount = 0;
+  int [] myArray = new int [5];
+  int[] evenArray = new int[5];
+  int userinput;
+  Scanner input = new Scanner(System.in);
+
+  while (numberount <5 ) {
+	  System.out.println("Enter number " + (numberount + 1) + "/5");
+	  userinput = input.nextInt();
+	  myArray[numberount] = userinput;
+	  numberount++;
+
+	  }
+
+	   int index=0;
+	   for (int count = 0; count<myArray.length; count++){
+		  if (myArray[count]%2 == 0){
+			  evenArray[index] = myArray[count];
+			  index++;
+
+		  }
+	   }
+        System.out.println("myArray Contents:");
+        for (int count = 0; count < myArray.length; count++) {
+            System.out.println(myArray[count] + " ");
+        }
+
+        System.out.println("evenArray Contents:");
+        for (int count = 0; count < evenArray.length; count++) {
+            System.out.println(evenArray[count] + " ");
+        }
+        System.out.println();
+    }
+}
